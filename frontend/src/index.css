@@ -5,9 +5,39 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(67, 66, 66);
+  color: aliceblue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.homeDiv{
+  text-align: center;
+  margin: auto;
+  border: 1px solid aliceblue;
+  border-radius: 8px;
+  width: 40%;
+  background-color: black;
+  box-shadow: 10px 5px 5px black;
+}
+
+.homeDiv button:hover{
+  background-color: aliceblue;
+  color: black;
+  cursor: pointer;
+}
+
+img{
+  height: 300px;
+  width: 300px;
+}
+
+button{
+  background-color: black;
+  color: aliceblue;
+  border-color: aliceblue;
+  border-radius: 5px;
 }
