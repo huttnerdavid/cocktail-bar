@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import CocktailDetailed from "../Components/CocktailDetailed";
+import CocktailCard from "../Components/CocktailCard";
 
 const Home = () => {
   const [cocktail, setCocktail] = useState("");
@@ -15,7 +15,7 @@ const Home = () => {
       <h1>Welcome to the Cocktail Bar</h1>
       <p>Look up a random Cocktail</p>
       <button onClick={randomCocktail}>Try it!</button>
-      {cocktail ? <CocktailDetailed cocktail={cocktail}/> : <></>}
+      {cocktail ? <CocktailCard cocktail={cocktail}/> : <></>}
     </div>
   );
 };

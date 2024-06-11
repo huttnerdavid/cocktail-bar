@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(67, 66, 66);
-  color: aliceblue;
+  background-color: #474B4f;
+  color: white;
 }
 
 code {
@@ -25,9 +25,9 @@ code {
 }
 
 .homeDiv button:hover{
-  background-color: aliceblue;
-  color: black;
+  background-color: #86C232;
   cursor: pointer;
+  border: #86C232 solid;
 }
 
 img{
@@ -36,8 +36,42 @@ img{
 }
 
 button{
-  background-color: black;
-  color: aliceblue;
-  border-color: aliceblue;
+  background-color: #61892F;
+  color: white;
   border-radius: 5px;
+  border: #61892F solid;
+}
+
+.linkElements + .linkElements{
+  margin-left: 20px;
+}
+
+.navBar{
+  text-align: center;
+  margin: auto;
+  background-color: #222629;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-top: #61892F solid 2px;
+}
+
+.cocktailNav{
+  text-align: center;
+}
+  
+.linkElements{
+  text-decoration: none;
+  font-size: medium;
+  background-color: #61892F;
+  color: white;
+  border-radius: 5px;
+  border: #61892F solid;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.linkElements:hover{
+  background-color: #86C232;
+  cursor: pointer;
+  border: #86C232 solid;
 }

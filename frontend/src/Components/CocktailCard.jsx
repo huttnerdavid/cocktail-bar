@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CocktailDetailed = ({cocktail}) => {
+const CocktailCard = ({cocktail}) => {
    let currentCocktail = cocktail.drinks[0];
   return (
     <div>
@@ -10,4 +10,4 @@ const CocktailDetailed = ({cocktail}) => {
   )
 }
 
-export default CocktailDetailed
+export default CocktailCard

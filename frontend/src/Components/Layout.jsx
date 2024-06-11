@@ -1,11 +1,15 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <div>
+    <>
+      <nav className='navBar'>
+        <Link to="/" className='linkElements'>Home</Link>
+        <Link to="/cocktails" className='linkElements'>Search for Cocktail</Link>
+      </nav>
       <Outlet />
-    </div>
+    </>
   )
 }
 
