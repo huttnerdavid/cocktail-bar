@@ -12,7 +12,7 @@ const SearchCocktailsPage = () => {
           Search by first letter
         </Link>
         <Link to="/cocktails/byname" className="linkElements">
-          Search by full name
+          Search by name
         </Link>
       </nav>
       <Outlet />
