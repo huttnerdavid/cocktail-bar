@@ -17,22 +17,16 @@ code {
 .homeDiv{
   text-align: center;
   margin: auto;
-  border: 1px solid aliceblue;
   border-radius: 8px;
   width: 40%;
-  background-color: black;
+  background-color:#222629;
   box-shadow: 10px 5px 5px black;
-}
-
-.homeDiv button:hover{
-  background-color: #86C232;
-  cursor: pointer;
-  border: #86C232 solid;
+  padding: 5px;
 }
 
 img{
-  height: 300px;
-  width: 300px;
+  height: 100px;
+  width: 100px;
 }
 
 button{
@@ -40,6 +34,13 @@ button{
   color: white;
   border-radius: 5px;
   border: #61892F solid;
+  margin: 5px;
+}
+
+button:hover{
+  background-color: #86C232;
+  cursor: pointer;
+  border: #86C232 solid;
 }
 
 .linkElements + .linkElements{
@@ -74,4 +75,29 @@ button{
   background-color: #86C232;
   cursor: pointer;
   border: #86C232 solid;
+}
+
+.cocktailCard{
+  background-color: #61892F;
+  width: 10%;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.cocktailCard:hover{
+  background-color: #86C232;
+  cursor: pointer;
+}
+
+.cocktailList{
+  text-align: center;
+}
+
+.searchTemplate{
+  text-align: center;
+  margin-top: 8px;
 }

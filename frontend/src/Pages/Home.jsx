@@ -13,9 +13,6 @@ const Home = () => {
   return (
     <div className="homeDiv">
       <h1>Welcome to the Cocktail Bar</h1>
-      <p>Look up a random Cocktail</p>
-      <button onClick={randomCocktail}>Try it!</button>
-      {cocktail ? <CocktailCard cocktail={cocktail}/> : <></>}
     </div>
   );
 };

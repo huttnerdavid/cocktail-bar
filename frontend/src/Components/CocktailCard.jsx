@@ -1,12 +1,16 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const CocktailCard = ({cocktail}) => {
-   let currentCocktail = cocktail.drinks[0];
+  const linkTo = `/cocktail/${cocktail.idDrink}`
   return (
-    <div>
-      <h2>Name: {currentCocktail.strDrink}</h2>
-      <img src={currentCocktail.strDrinkThumb} />
-    </div>
+    <Link to={linkTo}>
+      <div className='cocktailCard'>
+        <p>Name: {cocktail.strDrink}</p>
+        <img src={cocktail.strDrinkThumb} />
+      </div>
+    </Link>
+    
   )
 }
 
