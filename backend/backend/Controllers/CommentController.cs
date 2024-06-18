@@ -20,26 +20,34 @@ public class CommentController : ControllerBase
     [HttpGet("GetCommentsById")]
     public ActionResult<Comment[]> GetCommentsById([Required] int cocktailId)
     {
-        var cocktails = _dbContext.Comments.Where(comment => comment.cocktailId == cocktailId);
+        var cocktails = _dbContext.Comments.Where(comment => comment.CocktailId == cocktailId);
         return Ok(cocktails);
     }
 
     [HttpPost("PostComment")]
-    public async Task<ActionResult<string>> PostComment([Required] int cocktailId, [Required] string userName,
-        [Required] string commentText)
+    public async Task<ActionResult<string>> PostComment([FromBody] CommentDTO commentDto)
     {
         try
         {
-            _dbContext.Comments.Add(new Comment{cocktailId = cocktailId, Text = commentText, UserName = userName});
-            await _dbContext.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                _dbContext.Comments.Add(new Comment
+                {
+                    CocktailId = commentDto.CocktailId,
+                    Text = commentDto.CommentText,
+                    UserName = commentDto.UserName
+                });
+                await _dbContext.SaveChangesAsync();
 
-            return Ok("Comment added");
+                return Ok("Comment added");
+            }
 
+            return BadRequest(ModelState);
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
-            return BadRequest();
+            return BadRequest("An error occurred!");
         }
     }
 }

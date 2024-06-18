@@ -60,6 +60,8 @@ button{
   border-radius: 5px;
   border: #61892F solid;
   margin: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 button:hover{
@@ -125,4 +127,31 @@ button:hover{
 .searchTemplate{
   text-align: center;
   margin-top: 8px;
+}
+
+.commentDiv{
+  background-color: #222629;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.individualComment{
+  background-color: #474B4f;
+  width: 50%;
+  margin: auto;
+  text-align: justify;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.commentInput{
+  background-color: #474B4f;
+  width: 50%;
+  color: white;
+  border-radius: 5px;
 }
