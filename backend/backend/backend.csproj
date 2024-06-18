@@ -1,15 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-    </PropertyGroup>
+      <UserSecretsId>2a093b69-bddf-49e7-916e-12f3eb047829</UserSecretsId>
+  </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.20" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.20" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.17"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.17" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.20">
           <PrivateAssets>all</PrivateAssets>
@@ -17,11 +18,10 @@
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.20" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Model\" />
       <Folder Include="Services\" />
     </ItemGroup>
 

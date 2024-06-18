@@ -1,4 +1,5 @@
 using System.Text;
+using backend.Data;
 using Backend.Data;
 using Backend.Services.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -9,7 +10,11 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+AddServices();
+ConfigureSwagger();
+AddDbContext();
+AddAuthentication();
+AddIdentity();
 
 var app = builder.Build();
 
@@ -19,9 +24,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(builder =>
+app.UseCors(policyBuilder =>
 {
-    builder.WithOrigins("http://localhost:3000")
+    policyBuilder.WithOrigins("http://localhost:3000")
         .AllowAnyMethod()
         .AllowAnyHeader();
 });
@@ -81,7 +86,17 @@ void ConfigureSwagger()
 
 void AddDbContext()
 {
-    
+    var connectionString = builder.Configuration["SQLConnectionString"];
+    builder.Services.AddDbContext<UsersContext>(options =>
+    {
+        options.UseSqlServer(
+            connectionString);
+    });
+    builder.Services.AddDbContext<ApiContext>(options =>
+    {
+        options.UseSqlServer(
+            connectionString);
+    });
 }
 
 void AddAuthentication()
