@@ -9,10 +9,17 @@ const FocusedCocktail = ({ loggedIn, user }) => {
   const [comments, setComments] = useState(null);
   const [commentWritten, setCommentWritten] = useState("");
 
+  async function fetchComments() {
+    const response = await axios.get(
+      `http://localhost:5194/Comment/GetCommentsById?cocktailId=${id}`
+    );
+    setComments(response.data);
+  }
+
   async function handleComment() {
     let comment = {
       cocktailId: id,
-      userName: user,
+      userName: user.userName,
       commentText: commentWritten,
     };
   
@@ -30,6 +37,7 @@ const FocusedCocktail = ({ loggedIn, user }) => {
       );
   
       console.log('Response received:', response);
+      fetchComments();
     } catch (error) {
       if (error.response) {
         console.error('Response data:', error.response.data);
@@ -82,12 +90,7 @@ const FocusedCocktail = ({ loggedIn, user }) => {
       setLoading(false);
     }
 
-    async function fetchComments() {
-      const response = await axios.get(
-        `http://localhost:5194/Comment/GetCommentsById?cocktailId=${id}`
-      );
-      setComments(response.data);
-    }
+
 
     fetchCocktail();
     fetchComments();

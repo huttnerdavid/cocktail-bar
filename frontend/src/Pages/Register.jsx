@@ -16,7 +16,7 @@ const Register = () => {
         try{
             const response = await axios.post("http://localhost:5194/Auth/Register", user);
             if(response.status === 201){
-                navigate("/");
+                navigate("/login");
                 alert("Succesfully registered!");
             }
         }

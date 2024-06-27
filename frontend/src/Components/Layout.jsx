@@ -14,7 +14,7 @@ const Layout = ({ setLogin, loggedIn }) => {
         {loggedIn ? (
           <Link className="linkElements"
             onClick={() => {
-              setLogin(false);
+              setLogin("loggedIn", false);
             }}>
             Logout
           </Link>
