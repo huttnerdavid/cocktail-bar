@@ -7,6 +7,7 @@ namespace backend.Data;
 public class ApiContext : DbContext
 {
     public DbSet<Comment> Comments { get; set; }
+    public DbSet<FavoriteCocktail> Favorites { get; set; }
 
     public ApiContext(DbContextOptions<ApiContext> options) : base(options)
     {

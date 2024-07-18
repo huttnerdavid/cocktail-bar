@@ -25,7 +25,7 @@ public class CommentController : ControllerBase
     }
 
     [HttpPost("PostComment")]
-    public async Task<ActionResult<string>> PostComment([FromBody] CommentDTO commentDto)
+    public async Task<ActionResult<string>> PostComment([FromBody] CommentDto commentDto)
     {
         try
         {

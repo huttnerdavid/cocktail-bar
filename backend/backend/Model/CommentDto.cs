@@ -2,14 +2,14 @@
 
 namespace backend.Model;
 
-public class CommentDTO
+public class CommentDto
 {
     [Required]
     public int CocktailId { get; set; }
 
     [Required]
-    public string UserName { get; set; }
+    public string? UserName { get; set; }
 
     [Required]
-    public string CommentText { get; set; }
+    public string? CommentText { get; set; }
 }
