@@ -12,6 +12,7 @@ import SearchByLetter from './Pages/SearchByLetter';
 import SearchByName from './Pages/SearchByName';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import Favorites from './Pages/Favorites';
 
 export default function App() {
   // const [user, setUser] = useState(null);
@@ -28,9 +29,10 @@ export default function App() {
             <Route path="/cocktails/byletter" element={<SearchByLetter/>}/>
             <Route path="/cocktails/byname" element={<SearchByName/>}/>
           </Route>
-          <Route path="/cocktail/:id" element={<FocusedCocktail loggedIn={cookies.loggedIn} user={cookies.user}/>}/>
+          <Route path="/cocktail/:id" element={<FocusedCocktail loggedIn={cookies.loggedIn} user={user.user}/>}/>
           <Route path="/register" element={<Register />}/>
           <Route path="/login" element={<Login setLogin={setCookie} setUser={setUser}/>}/>
+          <Route path="/favorites" element={<Favorites user={user.user}/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

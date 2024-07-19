@@ -24,9 +24,45 @@ code {
   padding: 5px;
 }
 
+.favoriteDiv{
+  background-color: #222629;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.individualFavorite{
+  display: inline-block;
+  background-color: #474B4f;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.individualFavorite .cocktailCard{
+  width: auto;
+  padding: 5px;
+}
+
 #focusedImage{
   width: 200px;
   height: 200px;
+}
+
+#favoriteButton{
+  background-color: rgb(242, 242, 86);
+  border-color: rgb(242, 242, 86);
+  color: black;
+  font-weight: bold;
+}
+
+.unfavoriteButton{
+  background-color: red;
+  border-color: red;
+  color: black;
+  font-weight: bold;
 }
 
 #focusedDiv{

@@ -75,6 +75,6 @@ public class FavoriteController : ControllerBase
         {
             return Ok(true);
         }
-        return NotFound(false);
+        return Ok(false);
     }
 }

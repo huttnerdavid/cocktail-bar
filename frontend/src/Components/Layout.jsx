@@ -12,12 +12,16 @@ const Layout = ({ setLogin, loggedIn }) => {
           Search for Cocktail
         </Link>
         {loggedIn ? (
-          <Link className="linkElements"
-            onClick={() => {
-              setLogin("loggedIn", false);
-            }}>
-            Logout
-          </Link>
+          <>
+            <Link to="/favorites" className="linkElements">Favorites</Link>
+            <Link
+              className="linkElements"
+              onClick={() => {
+                setLogin("loggedIn", false);
+              }}>
+              Logout
+            </Link>
+          </>
         ) : (
           <>
             <Link to="/login" className="linkElements">
